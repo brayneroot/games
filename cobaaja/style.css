@@ -1,0 +1,64 @@
+/* GAYA UNTUK UI LAUNCHER */
+.launcher-ui .ui-panel {
+    border: 2px solid transparent; /* Border transparan sebagai dasar */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+/* KELAS 'ACTIVE' UNTUK EFEK HIGHLIGHT */
+.launcher-ui .ui-panel.active {
+    border-color: #4f46e5; /* Warna border highlight (biru indigo) */
+    background-color: rgba(79, 70, 229, 0.1); /* Latar belakang highlight */
+    transform: scale(1.03); /* Sedikit membesar */
+}
+
+.launcher-ui label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #9ca3af; /* Abu-abu */
+}
+
+.launcher-ui input[type="text"],
+.launcher-ui input[type="number"] {
+    width: 100%;
+    background-color: #1f2937; /* Abu-abu gelap */
+    border: 1px solid #4b5563; /* Abu-abu */
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.launcher-ui .mech-btn {
+    background-color: #374151; /* Abu-abu */
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.launcher-ui .mech-btn:hover {
+    background-color: #4f46e5; /* Biru Indigo */
+}
+
+/* Efek pulse untuk tombol launch terakhir */
+#ui-launch.active button {
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
